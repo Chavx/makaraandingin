@@ -1545,7 +1545,7 @@
                 <div class="guest-invitation-container">
                     <div class="guest-label" data-i18n="p1_invite_label">សូមគោរពអញ្ជើញ</div>
                     <div class="guest-name-box">
-                        <div class="guest-name-inner" id="guestName" data-guest-name="លីម៉ី បោះពុម្ព" data-i18n="guest_prefix_default">ជូនចំពោះ លីម៉ី បោះពុម្ព</div>
+                        <div class="guest-name-inner" id="guestName" data-guest-name="ភ្ញៀវកិត្តិយស" data-i18n="guest_prefix_default">ជូនចំពោះ ភ្ញៀវកិត្តិយស</div>
                     </div>
                 </div>
 
@@ -2855,7 +2855,7 @@ function downloadSpecificQR(fullImgId, filename) {
                 company_facebook_label: 'ហ្វេសប៊ុក៖',
                 company_group_btn: '👉 ចូលរួមក្នុងក្រុមដើម្បីមើលម៉ូតធៀបថ្មីៗ',
                 guest_prefix: 'ជូនចំពោះ ',
-                guest_prefix_default: 'ជូនចំពោះ លីម៉ី បោះពុម្ព',
+                guest_prefix_default: 'ជូនចំពោះ ភ្ញៀវកិត្តិយស',
                 p5_gift_title: '🎁 ជូនពរឌីជីថល (ABA Bank)'
             },
             en: {
@@ -2938,7 +2938,7 @@ function downloadSpecificQR(fullImgId, filename) {
                 company_facebook_label: 'Facebook:',
                 company_group_btn: '👉 Join the group to see the latest invitation designs',
                 guest_prefix: 'To: ',
-                guest_prefix_default: 'To: LYMEY Printing',
+                guest_prefix_default: 'To: Honored Guest',
                 p5_gift_title: '🎁 Digital Gift (ABA Bank)'
             }
         };
@@ -3007,7 +3007,7 @@ function downloadSpecificQR(fullImgId, filename) {
 
             const guestEl = document.getElementById('guestName');
             if (guestEl) {
-                const guestName = guestEl.getAttribute('data-guest-name') || 'លីម៉ី បោះពុម្ព';
+                const guestName = guestEl.getAttribute('data-guest-name') || 'ភ្ញៀវកិត្តិយស';
                 const hasCustomGuest = !!new URLSearchParams(window.location.search).get('to');
                 if (!hasCustomGuest) {
                     guestEl.innerHTML = dict.guest_prefix_default || ((dict.guest_prefix || '') + guestName);
